@@ -71,7 +71,7 @@ body {
   .invest {
     display: flex;
     flex-direction: column;
-    margin-top: 12%;
+    margin-top: 18%;
     align-items: center;
     gap: 12%;
   }
