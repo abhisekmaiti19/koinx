@@ -13,6 +13,11 @@ module.exports = {
         "426px": "426px",
         "237px": "237px",
         "881px": "881px",
+        "327px": "182px",
+        "729px": "729px",
+        mywidth30: "30vw",
+        mywidth60: "60vw",
+        parcent: "70%",
       },
       height: {
         "576px": "576px",
@@ -20,6 +25,8 @@ module.exports = {
         "879px": "879px",
         "86px": "86px",
         "42px": "42px",
+        "182px": "182px",
+        "786px": "786px",
       },
       colors: {
         white: "#ffffff",
@@ -30,6 +37,7 @@ module.exports = {
         downborder: "#C9CFDD99",
       },
       screens: {
+        mysc: "1440px",
         "2sm": "200px",
       },
     },

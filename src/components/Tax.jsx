@@ -33,21 +33,12 @@ export default function Tax() {
      
      //handle purchase data
      const[purchase, setPurchase] = useState(0);
-    //  function funpurchase(data){
-    //         setPurchase(data);
-    //  }
 
      //handle sale data
      const[sale, setSale] = useState(0);
-    //  function funsale(data){
-    //         setSale(data);
-    //  }
-
+    
      //handle expenses
      const[exp, setExp] = useState(0);
-    //  function funexp(data){
-    //         setExp(data);
-    //  }
 
      const[capitalGain, setCapitalGain]  = useState(0);
      const[longterm, setLongterm] = useState(0);
@@ -55,8 +46,6 @@ export default function Tax() {
      const [paytax, setPaytax] = useState(0);
 
      //main calculation
-    
-
      useEffect(()=>{
         function taxchanges(){
             if(anincome === "1"){
@@ -121,26 +110,26 @@ export default function Tax() {
   return (
    
     // tax card start 
-    <div className='w-[881px] h-[879px] bg-white rounded-2xl flex flex-col justify-center items-center'>
+    <div className='taxcard lg:w-[881px] lg:h-[879px] bg-white rounded-2xl flex flex-col justify-center items-center'>
         {/* tax card inner */}
-        <div className='flex flex-col justify-evenly gap-10' style={{"width":"729px","height":"786px"}}>
+        <div className='undertax lg:w-[729px] lg:h-[786px]  flex flex-col justify-evenly gap-10' >
             {/* tax card heading  */}
             <h1 className='h-[42px] flex justify-center items-center text-3xl font-bold'>Free Crypto Tax Calculator Australia</h1>
             {/* Inputs  */}
-            <div className='flex flex-col w-full h-full gap-7'>
+            <div className='datatax flex flex-col w-full h-full gap-7'>
                 {/* year and country  */}
-                <div className='w-full  h-[86px] pb-2 flex border-b border-2px border-downborder justify-between'>
+                <div  className='yearand w-full  h-[86px] pb-2 flex border-b border-2px border-downborder justify-between'>
                     {/* year select */}
-                    <div className=' h-full flex items-center justify-evenly' style={{"width":"338px"}}>
-                        <span className='text-center flex justify-end text-sm font-normal' style={{"width":"100px"}}>Financial year</span>
-                        <select name="financial year" className='bg-page rounded-lg px-4 py-2 font-bold' style={{"width":"228px","height":"48px"}} id="">
+                    <div className='year h-full flex items-center justify-evenly' style={{"width":"338px"}}>
+                        <span className='text-center flex justify-end text-sm font-normal'>Financial year</span>
+                        <select id="yearselect" name="financial year" className='bg-page rounded-lg px-4 py-2 font-bold'>
                             <option value="" className=''>FY 2023-2024</option>
                         </select>
                     </div>
                     {/* year end  */}
 
                     {/* country start  */}
-                    <div className='h-full flex items-center justify-evenly' style={{"width":"335.5px"}}>
+                    <div className='country h-full flex items-center justify-evenly' style={{"width":"335.5px"}}>
                         <Dropdown/>
                     </div>
                     {/* country end  */}
@@ -149,7 +138,7 @@ export default function Tax() {
                 {/* year and country end  */}
 
                 {/* purchase and sale  */}
-                <div className='w-full h-[86px] bg-white flex justify-between'>
+                <div className='purchase w-full h-[86px] bg-white flex justify-between'>
                     <div className=' h-full flex flex-col items-center justify-evenly' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-start items-start text-sm font-normal'>Enter purchase price of Crypto</span>
                        <div className='flex'><span className='w-1/5 h-14 p-6 bg-page rounded-l-lg text-lg font-medium flex items-center justify-center'>$</span><input type="number" className='w-4/5 h-14 bg-page rounded-r-lg p-6 text-lg font-medium' value={purchase} onChange={(ev)=>setPurchase(ev.target.value)} /></div>
@@ -162,7 +151,7 @@ export default function Tax() {
                 {/* purchase and sale end  */}
 
                 {/* EXPENSES AND INVESTMENT */}
-                <div className='w-full h-[86px] bg-white flex justify-between'>
+                <div className='invest w-full h-[86px] bg-white flex justify-between'>
                     <div className=' h-full flex flex-col items-center justify-evenly' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-start items-start text-sm font-normal'>Enter your Expenses</span>
                        <div className='flex'><span className='w-1/5 h-14 p-6 bg-page rounded-l-lg text-lg font-medium flex items-center justify-center'>$</span><input type="number" className='w-4/5 h-14 bg-page rounded-r-lg p-6 text-lg font-medium' value={exp} onChange={(ev)=>setExp(ev.target.value)} /></div>
@@ -198,7 +187,7 @@ export default function Tax() {
                 {/* eXPENSES AND INVESTMENT END  */}
 
                 {/* Annual Income and Investment type start  */}
-                <div className='w-full h-[86px] bg-white flex justify-between'>
+                <div className='anin w-full h-[86px] bg-white flex justify-between'>
                     <div className=' h-full flex flex-col items-center justify-evenly' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-start items-start text-sm font-normal'>Select Your Annual Income</span>
                        <select className='form-select block w-full h-14 bg-page rounded-lg px-4 text-lg font-medium' onChange={(event)=>incomechanges(event.target.value)} >
@@ -216,10 +205,10 @@ export default function Tax() {
                        </div>
                     </div>
                 </div>
-                {/* Annual Income and Investment type start  */}
+                {/* Annual Income and Investment type end  */}
 
                 {/* Capital Gains and discount long term  */}
-                <div className={`w-full h-[86px] bg-white flex justify-between ${tick ? "invisible":"visible"}`}>
+                <div className={`gain w-full h-[86px] bg-white flex justify-between ${tick ? "invisible":"visible"}`}>
                     <div className=' h-full flex flex-col items-center justify-evenly' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-start items-start text-sm font-normal'>Capital gains amount</span>
                        <input type="text" className='w-full h-14 bg-page rounded-lg p-6 text-lg font-medium' value={capitalGain} readOnly="readonly"/>
@@ -233,14 +222,14 @@ export default function Tax() {
 
                 {/* Net Capital gain and tax pay  */}
                 
-                <div className={`w-full h-[86px] bg-white flex justify-between `}>
+                <div className={`gbin w-full h-[86px] bg-white flex justify-between `}>
                     <div className=' h-full flex flex-col items-center justify-center bg-green-200 rounded-lg gap-2' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-center items-center text-sm font-normal'>Net Capital gains tax amount</span>
-                       <h1 className='w-full flex justify-center items-center text-lg font-bold text-green-900'>{tick ? capitalGain : mynet}</h1>
+                       <h1 className='w-full flex justify-center items-center text-lg font-bold text-green-900'>{`$ ${tick ? capitalGain : mynet}`}</h1>
                     </div>
                     <div className=' h-full flex flex-col items-center justify-center bg-blue-200 rounded-lg gap-2' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-center items-center text-sm font-normal'>The tax you need to pay*</span>
-                       <h1 className='w-full flex justify-center items-center text-lg text-primary font-bold'>{ capitalGain <= 0 ? 0 : paytax}</h1>
+                       <h1 className='w-full flex justify-center items-center text-lg text-primary font-bold'>{ `$ ${capitalGain <= 0 ? 0 : paytax}`}</h1>
                     </div>
                 </div>
                 {/* Net Capital gain and tax pay END  */}

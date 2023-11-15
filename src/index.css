@@ -5,9 +5,93 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-/* 
+
 body {
-  height: 100vh;
-  width: 100vw;
   background-color: #eff2f5;
-} */
+}
+
+#year span {
+  width: 100px;
+}
+
+#yearselect {
+  width: 228px;
+  height: 48px;
+}
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .taxcard {
+    width: 90vw;
+    height: 180vh;
+  }
+
+  .undertax {
+    width: 80%;
+    height: 100%;
+    padding-top: 4%;
+  }
+  .undertax h1 {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .datatax {
+    width: 100%;
+
+    /* background-color: blue; */
+  }
+  .yearand {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 10%;
+  }
+
+  #year span {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #yearselect {
+    width: 80%;
+  }
+  .country {
+    width: 50%;
+  }
+  .purchase {
+    flex-direction: column;
+    margin-top: 12%;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  .invest {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    align-items: center;
+    gap: 12%;
+  }
+  .anin,
+  .gain,
+  .gbin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 40%;
+  }
+  .anin input {
+    width: 50%;
+  }
+  .gain {
+    margin-top: 15%;
+  }
+  .gbin {
+    margin-top: 15%;
+  }
+}
