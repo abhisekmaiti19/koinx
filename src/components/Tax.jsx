@@ -99,7 +99,7 @@ export default function Tax() {
             
             let mtax = mytax
             let taxneed  = (mtax * netGain)/100;
-            console.log(taxneed)
+            
             setPaytax(taxneed)
     
          }
@@ -229,7 +229,7 @@ export default function Tax() {
                     </div>
                     <div className=' h-full flex flex-col items-center justify-center bg-blue-200 rounded-lg gap-2' style={{"width":"335.5px"}}>
                        <span className='w-full flex justify-center items-center text-sm font-normal'>The tax you need to pay*</span>
-                       <h1 className='w-full flex justify-center items-center text-lg text-primary font-bold'>{ `$ ${capitalGain <= 0 ? 0 : paytax}`}</h1>
+                       <h1 className='w-full flex justify-center items-center text-lg text-primary font-bold'>{ `$ ${tick ? (capitalGain*mytax)/100 : capitalGain <= 0 ? 0 : paytax}`}</h1>
                     </div>
                 </div>
                 {/* Net Capital gain and tax pay END  */}
