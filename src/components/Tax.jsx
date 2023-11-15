@@ -83,7 +83,7 @@ export default function Tax() {
      const[capitalGain, setCapitalGain]  = useState(0);
      const[longterm, setLongterm] = useState(0);
 
-
+     const [paytax, setPaytax] = useState(0);
 
      //main calculation
      function calc(){
@@ -105,13 +105,13 @@ export default function Tax() {
 
      }
 
-     useEffect(()=>{
-        taxchanges(anincome)
-     },[anincome])
+    //  useEffect(()=>{
+    //     taxchanges(anincome)
+    //  },[anincome])
 
-     useEffect(()=>{
-        calc()
-     },[sale,exp,purchase])
+    //  useEffect(()=>{
+    //     calc()
+    //  },[sale,exp,purchase])
 
      
   return (
