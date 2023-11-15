@@ -83,15 +83,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10%;
-    margin-top: 40%;
+    margin-top: 50%;
   }
   .anin input {
     width: 50%;
   }
   .gain {
-    margin-top: 15%;
+    margin-top: 20%;
   }
   .gbin {
-    margin-top: 15%;
+    margin-top: 20%;
   }
 }
