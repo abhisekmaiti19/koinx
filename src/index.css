@@ -19,9 +19,21 @@ body {
   height: 48px;
 }
 
+@media (min-width: 750) and (max-width: 1024) {
+  .taxcard {
+    margin-top: 2vh;
+    width: 100vw;
+    height: 160vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media (min-width: 300px) and (max-width: 750px) {
   .taxcard {
-    width: 90vw;
+    margin-top: 2vh;
+    width: 100vw;
     height: 160vh;
     display: flex;
     justify-content: center;
