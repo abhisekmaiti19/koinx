@@ -22,7 +22,7 @@ body {
 @media (min-width: 300px) and (max-width: 750px) {
   .taxcard {
     width: 90vw;
-    height: 180vh;
+    height: 160vh;
   }
 
   .undertax {
