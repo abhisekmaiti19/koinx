@@ -3,7 +3,7 @@ import promot from "../asset/promot.png"
 
 export default function Promotioncard() {
   return (
-    <div className=' mysc:w-[426px] mysc:h-[576px] xl:w-[mywidth30] flex flex-col bg-primary rounded-lg  py-[55px] px-4 justify-center items-center gap-9'>
+    <div className=' mysc:w-[426px] mysc:h-[576px] xl:w-[mywidth30] flex flex-col bg-primary rounded-lg  py-[55px] px-4 justify-center items-center gap-9 z-100'>
         <div className='mysc:w-[327px] mysc:h-[182px] xl:w-48 felx flex-col gap-4 flex justify-center items-center'>
             <h1 className='2sm:text-2xl mysc:text-xl xl:text-xl text-center font-bold text-white' >Get Started with KoinX for FREE</h1>
             <span className='2sm:w-4/5 w-full text-center xl:text-xs font-medium text-white'>
