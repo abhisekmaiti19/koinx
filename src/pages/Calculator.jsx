@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Promotioncard from '../components/Promotioncard'
 import Tax from '../components/Tax'
 import Faq from '../components/Faq'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 export default function Calculator() {
   return (
